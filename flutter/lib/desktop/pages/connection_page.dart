@@ -41,7 +41,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
   void onUsePublicServerGuide() {
     const url = "https://rustdesk.com/pricing.html";
     canLaunchUrlString(url).then((can) {
-      if (can) {
+      if (!can) {
         launchUrlString(url);
       }
     });
